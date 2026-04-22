@@ -5,7 +5,6 @@
 - assets/ : 관련 스샷 또는 사진
 - basics/ : 문법 학습
 - notes/ : 개념 정리
-- practice/ : 문제 풀이
 - mini-projects/ : 작은 프로젝트  
   
 ## 진행 상황
