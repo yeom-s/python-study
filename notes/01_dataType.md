@@ -1,6 +1,6 @@
 ## 02-1. 숫자형
 ### - 주요 연산자
-__거듭 제곱 (**)__
+__| 거듭 제곱 (**)__
 ```
 a = 3
 b = 4
@@ -12,7 +12,7 @@ print(a ** b)       # 81
 print(7 % 3)      # 1
 ```
 
-**나눗셈 vs 몫 vs 나머지**
+**| 나눗셈 vs 몫 vs 나머지**
 | 연산자 | 설명 | 예시 | 결과 |
 |--------|------|------|------|
 | `/` | 나눗셈 (소수점 포함) | `7 / 4` | `1.75` |
@@ -70,20 +70,20 @@ print(7 % 3)      # 1
 이 중에서 활용 빈도가 높은 것은 `\n`, `\t`, `\\`, `\'`, `\"` 이다.
 
 ### - 문자열 연산하기
-**문자열 더하기**
+**| 문자열 더하기**
 ```
 a = "Python"
 b = " is fun!"
 print(a+b)      # Python is fun!
 ```
 
-**문자열 곱하기**
+**| 문자열 곱하기**
 ```
 a = "python"
 print(a * 2)        # pythonpython
 ```
 
-**문자열 길이 구하기**  
+**| 문자열 길이 구하기**  
 • 길이는 len 함수를 사용하여 구할 수 있다(공백 문자 포함)   
 • len 함수는 print 함수처럼 파이썬의 기본 내장 함수로, 별다른 설정 없이 바로 사용할 수 있다.
 ```
@@ -99,7 +99,7 @@ print(len(a))   # 18
 >```
 
 ### - 문자열 인덱싱과 슬라이싱
-**문자열 인덱싱**
+**| 문자열 인덱싱**
 ```
 x = "Try your best rather than be the best"
 print(x[2])     # y
@@ -110,9 +110,50 @@ x[0]: `T`, x[1]: `r`, x[2]: `y`, x[3]: ` `, x[4]: `y`, ⋯
 • 파이썬은 0부터 숫자를 센다.  
 • -1은 뒤에서부터 첫 번째 문자, -5는 뒤에서부터 다섯 번째 문자를 뜻한다.
 
-**문자열 슬라이싱**
+**| 문자열 슬라이싱**  
+• __방법1__
 ```
 x = "Try your best rather than be the best"
 y =  x[0] + x[1] + x[2] + x[3] + x[4] + x[5]
 print(y)    # Try yo
+``` 
+
+• __방법2__  
+∘  x[시작 번호:끝 번호-1]  
+∘ 숫자를 생략하면 '끝 번호부터 ~' or '~부터 끝번호까지' 라는 뜻이다.
 ```
+x = "Try your best rather than be the best"
+print(x[0:5])       # Try y
+print(x[:8])          # Try your
+print(x[13:21])    #  rather
+print(x[14:-1])     # rather than be the bes
+```
+
+**| 슬라이싱으로 문자열 나누기**
+```
+a = "20230331Rainy"
+date = a[:8]
+weather = a[8:]
+print(date)         # 20230331
+print(weather)   # Rainy
+
+year = a[:4]
+day = a[4:8]
+print(year)     # 2023
+print(day)      # 0331
+```
+
+**💡 응용문제**  
+```
+a = "Pithon"
+print(a[1])     # i
+
+# a[1] = 'y'      # TypeError: 'str' object does not support item assignment
+print(a)        # Pithon
+
+b = a[:1] + 'y' + a[2:]
+print(b)        # Python
+```
+
+---
+

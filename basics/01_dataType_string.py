@@ -57,6 +57,36 @@ print(x[0])    # T
 print(x[-1])    # t
 
 # - 문자열 슬라이싱
+# 방법1
 x = "Try your best rather than be the best"
 y =  x[0] + x[1] + x[2] + x[3] + x[4] + x[5]
 print(y)    # Try yo
+
+# 방법2
+# x[시작 번호:끝 번호-1] => 0 <= x < 5
+# 숫자를 생략하면 '끝 번호부터 ~' or '~부터 끝번호까지' 라는 뜻이다.
+print(x[0:5])       # Try y
+print(x[:8])         # Try your
+print(x[13:21])    #  rather
+print(x[14:-1])    # rather than be the bes
+
+# - 슬라이싱으로 문자열 나누기
+a = "20230331Rainy"
+date = a[:8]
+weather = a[8:]
+print(date)         # 20230331
+print(weather)   # Rainy
+
+year = a[:4]
+day = a[4:8]
+print(year)     # 2023
+print(day)      # 0331
+
+## 응용문제
+a = "Pithon"
+print(a[1])     # i
+# a[1] = 'y'      # TypeError: 'str' object does not support item assignment
+print(a)        # Pithon
+
+b = a[:1] + 'y' + a[2:]
+print(b)        # Python
