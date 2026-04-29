@@ -155,5 +155,30 @@ b = a[:1] + 'y' + a[2:]
 print(b)        # Python
 ```
 
----
+### - 문자열 포매팅(string formatting)
+문자열 안에 어떤 값을 삽입하는 방법이다.
 
+```
+1. 숫자 대입
+print("I eat %d apples"), %3
+
+2. 문자열 대입
+print("I eat %s apples" % "five")        # I eat five apples
+
+3. 여러 개 넣을 때는 튜플 사용
+print("I ate %d apples. so I was sick for %s days" % (10, "three"))        # I ate 10 apples. so I was sick for three days
+
+4. 실수
+print("I eat %f apples" % 3.1234)        # I eat 3.123400 apples
+print("I eat %.1f apples" % 3.1234)        # I eat 3.1 apples
+print("I eat %.3f apples" % 3.1234)        # I eat 3.123 apples
+
+5. 문자열 포맷 코드와 %
+# print("Error is %d%" % 98)     # ValueError: incomplete format
+print("Error is %d%%" % 98)     # Error is 98%
+
+추천방식. f-string
+count = 2
+coffee = "americano coffee"
+print(f"I have {count} {coffee}")       # I have 2 americano coffee
+```
