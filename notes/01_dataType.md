@@ -182,3 +182,20 @@ count = 2
 coffee = "americano coffee"
 print(f"I have {count} {coffee}")       # I have 2 americano coffee
 ```
+
+### - 포맷 코드와 숫자
+1. 정렬과 공백
+```
+- 오른쪽 정렬
+print("%10s" % "hi")           #         hi
+
+- 왼쪽 정렬
+print("%-10sjane." % "hi")  # hi        jane.
+```
+전체 길이가 10개인 문자열 공간에 'hi' 라는 문자열은 오른쪽/왼쪽 정렬을 하고, 나머지 공간은 공백으로 채운다.
+
+2. 소수점 표현
+```
+print("%0.4f" % 3.123456789)    # 3.1235
+print("%10.4f" % 3.123456789)    #     3.1235
+```

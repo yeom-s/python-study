@@ -91,19 +91,26 @@
 # b = a[:1] + 'y' + a[2:]
 # print(b)        # Python
 
-# - 문자열 포매팅(string formatting)
-print("I eat %d apples" % 3)        # I eat 3 apples
-print("I eat %s apples" % "five")        # I eat five apples
-print("I ate %d apples. so I was sick for %s days" % (10, "three"))        # I ate 10 apples. so I was sick for three days
-print("I eat %f apples" % 3.1234)        # I eat 3.123400 apples
-print("I eat %.1f apples" % 3.1234)        # I eat 3.1 apples
-print("I eat %.3f apples" % 3.1234)        # I eat 3.123 apples
+# # - 문자열 포매팅(string formatting)
+# print("I eat %d apples" % 3)        # I eat 3 apples
+# print("I eat %s apples" % "five")        # I eat five apples
+# print("I ate %d apples. so I was sick for %s days" % (10, "three"))        # I ate 10 apples. so I was sick for three days
+# print("I eat %f apples" % 3.1234)        # I eat 3.123400 apples
+# print("I eat %.1f apples" % 3.1234)        # I eat 3.1 apples
+# print("I eat %.3f apples" % 3.1234)        # I eat 3.123 apples
 
-# print("Error is %d%" % 98)     # ValueError: incomplete format
-print("Error is %d%%" % 98)     # Error is 98%
+# # print("Error is %d%" % 98)     # ValueError: incomplete format
+# print("Error is %d%%" % 98)     # Error is 98%
 
-count = 2
-coffee = "americano coffee"
-print(f"I have {count} {coffee}")       # I have 2 americano coffee
+# count = 2
+# coffee = "americano coffee"
+# print(f"I have {count} {coffee}")       # I have 2 americano coffee
 
-# -
+# - 포맷코드와 숫자
+# 1. 정렬과 공백
+print("%10s" % "hi")           #         hi
+print("%-10sjane." % "hi")  # hi        jane.
+
+# 2. 소수점 표현
+print("%0.4f" % 3.123456789)    # 3.1235
+print("%10.4f" % 3.123456789)    #     3.1235
